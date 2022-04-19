@@ -1,0 +1,328 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+*, h5 {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #c5e4e7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+}
+
+body header {
+  margin-top: 4rem;
+  padding: 3rem 0;
+}
+
+body header div svg {
+  margin: 0 auto;
+}
+
+body main .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 1.5rem;
+  width: 700px;
+  border-radius: 20px;
+}
+
+body main .card .left {
+  margin-right: 2rem;
+  width: 50%;
+}
+
+body main .card .left .bill, body main .card .left .people {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+body main .card .left .bill label, body main .card .left .people label {
+  color: #5e7a7d;
+  font-size: .7rem;
+  position: relative;
+}
+
+body main .card .left .bill label span, body main .card .left .people label span {
+  position: absolute;
+  right: 0;
+  color: red;
+}
+
+body main .card .left .bill svg, body main .card .left .people svg {
+  position: absolute;
+  top: 37px;
+  left: 10px;
+}
+
+body main .card .left .bill input, body main .card .left .people input {
+  padding: .4rem .5rem;
+  background-color: #f4fafa;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border: none;
+  color: #00494d;
+  outline: none;
+  text-align: right;
+  cursor: pointer;
+}
+
+body main .card .left .bill input::-webkit-input-placeholder, body main .card .left .people input::-webkit-input-placeholder {
+  font-size: 1.3rem;
+  color: #7f9c9f;
+}
+
+body main .card .left .bill input:-ms-input-placeholder, body main .card .left .people input:-ms-input-placeholder {
+  font-size: 1.3rem;
+  color: #7f9c9f;
+}
+
+body main .card .left .bill input::-ms-input-placeholder, body main .card .left .people input::-ms-input-placeholder {
+  font-size: 1.3rem;
+  color: #7f9c9f;
+}
+
+body main .card .left .bill input::placeholder, body main .card .left .people input::placeholder {
+  font-size: 1.3rem;
+  color: #7f9c9f;
+}
+
+body main .card .left .bill input:focus, body main .card .left .bill input:hover, body main .card .left .people input:focus, body main .card .left .people input:hover {
+  outline: 1.5px solid #26c0ab;
+  border-radius: 5px;
+}
+
+body main .card .left .people {
+  margin-top: 2rem;
+}
+
+body main .card .left .select-tips h5 {
+  font-size: .7rem;
+  color: #5e7a7d;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+body main .card .left .select-tips .tip-btns {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto;
+      grid-template-columns: auto auto auto;
+  grid-gap: 15px;
+}
+
+body main .card .left .select-tips .tip-btns .tip-btn, body main .card .left .select-tips .tip-btns .custom-tip-btn {
+  width: 80px;
+  border: none;
+  padding: .3rem 0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+body main .card .left .select-tips .tip-btns .tip-btn {
+  background-color: #00494d;
+  color: white;
+  font-weight: 800;
+}
+
+body main .card .left .select-tips .tip-btns .tip-btn:hover {
+  background-color: #9adbd2;
+  color: #00494d;
+}
+
+body main .card .left .select-tips .tip-btns .tip-btn.active {
+  background-color: #26c0ab;
+  color: #00494d;
+}
+
+body main .card .left .select-tips .tip-btns .custom-tip-btn {
+  background-color: #f4fafa;
+  color: #00494d;
+  outline: none;
+  font-weight: 700;
+  padding-right: .5rem;
+  text-align: center;
+}
+
+body main .card .left .select-tips .tip-btns .custom-tip-btn:focus, body main .card .left .select-tips .tip-btns .custom-tip-btn:hover {
+  outline: 1.5px solid #26c0ab;
+}
+
+body main .card .left .select-tips .tip-btns .custom-tip-btn::-webkit-input-placeholder {
+  color: #7f9c9f;
+  font-weight: 400;
+}
+
+body main .card .left .select-tips .tip-btns .custom-tip-btn:-ms-input-placeholder {
+  color: #7f9c9f;
+  font-weight: 400;
+}
+
+body main .card .left .select-tips .tip-btns .custom-tip-btn::-ms-input-placeholder {
+  color: #7f9c9f;
+  font-weight: 400;
+}
+
+body main .card .left .select-tips .tip-btns .custom-tip-btn::placeholder {
+  color: #7f9c9f;
+  font-weight: 400;
+}
+
+body main .card .right {
+  background-color: #00494d;
+  width: 50%;
+  border-radius: 10px;
+  padding: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body main .card .right .tips-output {
+  margin-top: 1rem;
+}
+
+body main .card .right .tips-output .tip-amt, body main .card .right .tips-output .total {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+body main .card .right .tips-output .tip-amt h5, body main .card .right .tips-output .total h5 {
+  font-size: .8rem;
+  font-weight: 700;
+  color: white;
+}
+
+body main .card .right .tips-output .tip-amt small, body main .card .right .tips-output .total small {
+  color: #7f9c9f;
+  font-size: .7rem;
+  font-weight: bold;
+}
+
+body main .card .right .tips-output .tip-amt-right h2, body main .card .right .tips-output .total-right h2 {
+  color: #26c0ab;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+body main .card .right .reset-btn {
+  background-color: #157178;
+  border: none;
+  color: #00494d;
+  font-size: 1rem;
+  padding: .5rem;
+  border-radius: 5px;
+  font-weight: 700;
+}
+
+body main .card .right .reset-btn:hover {
+  background-color: #a7d6d0;
+}
+
+@media (max-width: 768.98px) {
+  body header {
+    margin-top: 1rem;
+  }
+  body main .card {
+    width: 560px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  body main .card .left .select-tips .tip-btns .tip-btn, body main .card .left .select-tips .tip-btns .custom-tip-btn {
+    width: 70px;
+  }
+}
+
+@media (max-width: 560.98px) {
+  body main .card {
+    width: 100%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body main .card .left {
+    width: 100%;
+  }
+  body main .card .left .select-tips .tip-btns .tip-btn, body main .card .left .select-tips .tip-btns .custom-tip-btn {
+    width: 70px;
+  }
+  body main .card .right {
+    width: 100%;
+  }
+}
+
+@media (max-width: 375px) {
+  body main .card .left .select-tips .tip-btns {
+    -ms-grid-columns: auto auto;
+        grid-template-columns: auto auto;
+  }
+  body main .card .left .select-tips .tip-btns .tip-btn, body main .card .left .select-tips .tip-btns .custom-tip-btn {
+    width: 120px;
+  }
+  body main .card .left .select-tips .tip-btns .tip-btn {
+    padding: .5rem 0;
+  }
+  body main .card .left .select-tips .tip-btns .custom-tip-btn::-webkit-input-placeholder {
+    text-align: center;
+  }
+  body main .card .left .select-tips .tip-btns .custom-tip-btn:-ms-input-placeholder {
+    text-align: center;
+  }
+  body main .card .left .select-tips .tip-btns .custom-tip-btn::-ms-input-placeholder {
+    text-align: center;
+  }
+  body main .card .left .select-tips .tip-btns .custom-tip-btn::placeholder {
+    text-align: center;
+  }
+  body main .card .right {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=style.css.map */

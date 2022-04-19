@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+  $primary-color :  hsl(172, 67%, 45%);
+  $very-dark-cyan:  hsl(183, 100%, 15%);
+  $dark-gray-cyan: hsl(186, 14%, 43%);
+  $gray-cyan: hsl(184, 14%, 56%);
+  $light-gray-cyan: hsl(185, 41%, 84%);
+  $very-light-gray-cyan: hsl(189, 41%, 97%);
+  $white: hsl(0, 0%, 100%);
+  $form-font-size: 24px;
+  $font-family: 'Space Mono', monospace;
+
+  
+*,h5{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: $light-gray-cyan;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: $font-family;
+    font-weight: 700;
+    header{
+        margin-top: 4rem;
+        padding: 3rem 0;
+        div{
+            svg{
+                margin: 0 auto;
+            }
+        }
+    }
+    main{
+        .card{
+            display: flex;
+            flex-direction: row;
+            padding: 1.5rem;
+            width: 700px;
+            border-radius: 20px;
+            // min-height: 50vh;
+            .left{
+                margin-right: 2rem;
+                width: 50%;
+               .bill,.people{
+                   display: flex;
+                   flex-direction: column;
+                   margin-bottom: 2rem;
+                   position: relative;
+                   label{
+                       color: $dark-gray-cyan;
+                       font-size: .7rem;
+                       position: relative;
+                       span{
+                           position: absolute;
+                           right: 0;
+                           color: red;
+                       }
+                   }
+                   svg{
+                    position: absolute;
+                    top: 37px;
+                    left: 10px;
+                   }
+                   input{
+                       padding:  .4rem .5rem;
+                       background-color: $very-light-gray-cyan;
+                       font-size: 1.1rem;
+                       font-weight: 700;
+                       border: none;
+                       color: $very-dark-cyan;
+                       outline: none;
+                       text-align: right;
+                       cursor: pointer;
+                       &::placeholder{
+                           font-size: 1.3rem;
+                           color: $gray-cyan;
+                       }
+                       &:focus, &:hover{
+                        outline: 1.5px solid $primary-color;
+                        border-radius: 5px;
+                       }
+                   }
+               }
+
+               .people{
+                   margin-top: 2rem;
+               }
+
+               .select-tips{
+                   h5{
+                       font-size: .7rem;
+                       color: $dark-gray-cyan;
+                       font-weight: 700;
+                       margin-bottom: 1rem;
+                   }
+                   .tip-btns{
+                       display: grid;
+                        grid-template-columns: auto auto auto;
+                        grid-gap: 15px;
+                       .tip-btn, .custom-tip-btn{
+                           width: 80px;
+                           border: none;
+                           padding: .3rem 0;
+                           border-radius: 5px;
+                           cursor: pointer;
+                       }
+                       .tip-btn{
+                           background-color: $very-dark-cyan;
+                           color: $white;
+                           font-weight: 800;
+                            &:hover{
+                                background-color:#9adbd2 ;
+                                color: $very-dark-cyan;
+                            }
+                            &.active{
+                                background-color:$primary-color;
+                                color: $very-dark-cyan;
+                            }
+
+                       }
+                       .custom-tip-btn{
+                        background-color:$very-light-gray-cyan;
+                         color: $very-dark-cyan;
+                        outline: none;
+                        font-weight: 700;
+                        padding-right: .5rem;
+                        text-align: center;
+                           &:focus,&:hover{
+                               outline: 1.5px solid $primary-color;
+                           }
+                           &::placeholder{
+                               color: $gray-cyan;
+                               font-weight: 400;
+                           }
+                       }
+               }
+            }
+        }
+            .right{
+               background-color: $very-dark-cyan;
+               width: 50%;
+               border-radius: 10px;
+               padding: 1.5rem;
+               display: flex;
+               flex-direction: column;
+               justify-content: space-between;
+                .tips-output{
+                    margin-top: 1rem;
+                    .tip-amt, .total{
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: space-between;
+                        margin-bottom: 1rem;
+                        font-weight: 700;
+                        h5{
+                            font-size: .8rem ;
+                            font-weight: 700;
+                            color: $white;
+                        }
+                        small{
+                            color: $gray-cyan;
+                            font-size: .7rem;
+                            font-weight: bold;
+                        }
+                        &-right{
+                           h2{
+                            color: $primary-color;
+                            font-weight: 700;
+                            font-size: 2rem;
+                           }
+                        }
+                    }
+                }
+                .reset-btn {
+                     background-color:rgb(21, 113, 120) ;
+                     border: none;
+                     color: $very-dark-cyan;
+                     font-size: 1rem;
+                     padding: .5rem;
+                     border-radius: 5px;
+                     font-weight: 700;
+                     &:hover{
+                         background-color:#a7d6d0 ;
+                     }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768.98px) {
+    body{
+        header{
+            margin-top: 1rem;
+        }
+    main{
+        .card{
+            width: 560px;
+            justify-content: space-between;
+            .left{
+                .select-tips{
+                    .tip-btns{
+                        // grid-template-columns: auto auto;
+                        .tip-btn, .custom-tip-btn{
+                            width: 70px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+}
+@media (max-width: 560.98px) {
+    body{
+    main{
+        .card{
+            width: 100%;
+            justify-content: space-between;
+            flex-direction: column;
+            .left{
+                width: 100%;
+                .select-tips{
+                    .tip-btns{
+                        // grid-template-columns: auto auto;
+                        .tip-btn, .custom-tip-btn{
+                            width: 70px;
+                        }
+                    }
+                }
+            }
+            .right{
+                width: 100%;
+            }
+        }
+    }
+}
+}
+@media (max-width: 375px) {
+    body{
+    main{
+        .card{
+            .left{
+                .select-tips{
+                    .tip-btns{
+                        grid-template-columns: auto auto;
+                        .tip-btn, .custom-tip-btn{
+                            width: 120px;
+                        }
+                        .tip-btn{
+                            padding: .5rem 0;
+                        }
+                        .custom-tip-btn{
+                            &::placeholder{
+                                text-align: center;
+                            }
+                        }
+                    }
+                }
+            }
+            .right{
+                width: 100%;
+            }
+        }
+    }
+}
+}
